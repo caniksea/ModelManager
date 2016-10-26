@@ -1,0 +1,55 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<footer class="footer">
+    <div class="container-fluid">
+        <nav class="pull-left">
+            <ul>
+                <li>
+                    <a id="homeLinkF" href="javascript:void(0)">
+                        Home
+                    </a>
+                </li>
+                <% if (loggedIn) { %>
+                <% if (admin) { %>
+                <li>
+                    <a id="securityLinkF" href="javascript:void(0)">
+                        Securities
+                    </a>
+                </li>
+                <li>
+                    <a id="wealthMangerLinkF" href="javascript:void(0)">
+                        Wealth Managers
+                    </a>
+                </li>
+                <li>
+                    <a id="clientLinkF" href="javascript:void(0)">
+                        Clients
+                    </a>
+                </li>
+                <% } else if (wealthManager || client) { %>
+                <% if (wealthManager) {  %>
+                <li>
+                    <a id="modelLinkF" href="javascript:void(0)">
+                        Models
+                    </a>
+                </li>
+                <% } %>
+                <li>
+                    <a href="javascript:void(0)">
+                        Portfolios
+                    </a>
+                </li>
+                <% } %>
+                <% }%>
+            </ul>
+        </nav>
+        <p class="copyright pull-right">
+            &copy; 2016 <a href="javascript:void(0)">Model Manager</a>, Managing your investment efficiently
+        </p>
+    </div>
+    <div id="busyDiv" class="loading">
+        <div class="loading-box">
+            <img src="assets/img/ajax-loader.gif" />
+        </div>
+    </div>
+</footer>

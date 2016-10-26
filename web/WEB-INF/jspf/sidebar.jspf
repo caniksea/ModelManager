@@ -1,0 +1,65 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="sidebar" data-color="purple" data-image="assets/img/sidebar-5.jpg">
+
+    <!--
+
+        Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+        Tip 2: you can also add an image using data-image tag
+
+    -->
+
+    <div class="sidebar-wrapper">
+        <div class="logo">
+            <a href="javascript:void(0)" class="simple-text">
+                Model Manager v1.0
+            </a>
+        </div>
+
+        <ul class="nav">
+            <li>
+                <a id="homeLink" href="javascript:void(0)">
+                    <i class="pe-7s-graph"></i>
+                    <p>Home</p>
+                </a>
+            </li>
+            <% if(loggedIn){ %>
+            <% if(admin) {%>
+            <li>
+                <a id="securityLink" href="javascript:void(0)">
+                    <i class="pe-7s-bookmarks"></i>
+                    <p>Securities</p>
+                </a>
+            </li>
+            <li>
+                <a id="wealthMangerLink" href="javascript:void(0)">
+                    <i class="pe-7s-note2"></i>
+                    <p>Wealth Managers</p>
+                </a>
+            </li>
+            <li>
+                <a id="clientLink" href="javascript:void(0)">
+                    <i class="pe-7s-news-paper"></i>
+                    <p>Clients</p>
+                </a>
+            </li>
+            <% }else if (wealthManager || client) { %>
+            <% if(wealthManager) { %>
+            <li>
+                <a id="modelLink" href="javascript:void(0)">
+                    <i class="pe-7s-science"></i>
+                    <p>Models</p>
+                </a>
+            </li>
+            <% } %>
+            <li>
+                <a href="javascript:void(0)">
+                    <i class="pe-7s-map-marker"></i>
+                    <p>Portfolios</p>
+                </a>
+            </li>
+            <% } %>
+            <% } %>
+        </ul>
+    </div>
+</div>

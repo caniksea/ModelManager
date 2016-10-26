@@ -1,0 +1,64 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 22, 2016, 3:07:42 PM
+    Author     : @caniksea
+*/
+
+.main-panel > .imgBody{
+    background:url(../img/Panel_bg_image.png) no-repeat;
+    width: 100%;
+    background-size: 100% 100%;
+}
+.loading {
+    background: url(../img/black_fade.png);
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    position: fixed;
+    z-index: 2;
+    /*display: none;*/
+}
+
+.loading-box {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.loading-box img {
+    width: 30px;
+    margin: 5px;
+}
+
+#saveSecurityBtn, #saveModelBtn, #saveSecurity2ModelBtn {
+    margin-top: 23px;
+}
+
+.investImg {
+    min-height: 150px;
+    min-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle
+}
+
+td .editLabel:hover{
+    color: blue;
+}
+
+td .deleteLabel:hover{
+    color: red;
+}

@@ -1,0 +1,72 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div id="securityDiv" class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5">
+            </div>
+            <div class="col-md-7">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Add Security</h4>
+                        <!--<p class="category">Here is a subtitle for this table</p>-->
+                    </div>
+                    <div class="content">
+                        <form id="addSecurityForm" method="post" action="#">
+                            <input type="hidden" value="<%= userID %>" name="as_user_id" id="as_user_id" />
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input type="text" id="security_name" name="security_name" class="form-control" placeholder="Enter Security Name"
+                                               required />
+                                    </div>        
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Unit Price</label>
+                                        <input type="text" id="security_up" name="security_up" class="form-control" placeholder="Enter Unity Price"
+                                               required />
+                                    </div>        
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label></label>
+                                        <button type="submit" id="saveSecurityBtn" class="form-control btn btn-info btn-fill pull-right">Save</button>
+                                    </div>        
+                                </div>
+                            </div>                            
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                    <div class="footer">
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Security List</h4>
+                        <!--<p class="category">Here is a subtitle for this table</p>-->
+                    </div>
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped">
+                            <thead>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Unit Price</th>
+                               <th>Action</th>
+<!--                                 <th>City</th>-->
+                            </thead>
+                            <tbody id="securityTBody"></tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
