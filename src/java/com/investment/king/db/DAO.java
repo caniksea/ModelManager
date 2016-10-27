@@ -179,18 +179,17 @@ public class DAO {
     }
 
     public AddSecurityResponse getSecurity(String id) {
-        AddSecurityResponse asr = null;
         String response = "Found";
         String responseCode = "00";
         Security s = getSingleSecurity(id);
         if (s == null) {
             response = "Not Found";
             responseCode = "00";
-            asr = new AddSecurityResponse(s, response, responseCode);
         } else if (s.getId() == -1) {
-            asr = new AddSecurityResponse(s, "Application Error", "-99");
+            response = "Application Error";
+            responseCode = "-99";
         }
-        return asr;
+        return new AddSecurityResponse(s, response, responseCode);
     }
 
     public Security updateSecurity(String securityID, String name, String unitPrice) {
